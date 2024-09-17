@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
     <title>Document</title>
+    <!-- استخدام مكتبة Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+        
         body {
-            background: #1c1c1c url(bg.webp);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            background-size: cover;
             margin: 0;
             padding: 0;
             font-family: "Zain", system-ui;
+            overflow-x: hidden;
         }
+        
         .loader {
             position: fixed;
             top: 50%;
@@ -23,9 +28,11 @@
             color: #54cfbb;
             font-size: 20px;
         }
+        
         a {
             text-decoration: none;
         }
+        
         .header-page {
             position: fixed;
             top: 0;
@@ -33,16 +40,18 @@
             display: flex;
             justify-content: center;
         }
+        
         p3.appname {
             color: #54cfbb;
             font-weight: 900;
             font-size: 22px;
         }
+        
         .brand {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(180deg, #409a8c, #409a8c54, transparent);
+            background: rgba(64, 154, 140, 0.8);
             width: max-content;
             align-content: center;
             flex-direction: column;
@@ -51,61 +60,86 @@
             box-shadow: 0 0 80px -11px #3b867a;
             backdrop-filter: blur(24px);
         }
+        
         img.applogo {
             width: 65px;
             height: auto;
         }
+        
         .firstchannels-section, .secondchannels-section {
             margin-top: 157px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
         }
+        
         p2.sportchannels {
-            background: linear-gradient(270deg, #3b8b7e, transparent);
-            padding-left: 20px;
-            color: white;
+            background: #2c3e50;
+            color: #ffffff;
             margin-bottom: 15px;
             font-weight: 500;
             font-size: 25px;
-            padding: 5px 2px 0 42px;
+            padding: 5px 20px;
             border-radius: 100px 0px 0px 100px;
+            display: flex;
+            align-items: center;
         }
+        
         p2.movieschannels {
-            background: linear-gradient(270deg, #8b3b3b, transparent);    
-            padding-left: 20px;
-            color: white;
+            background: #e74c3c;
+            color: #ffffff;
             margin-bottom: 15px;
             font-weight: 500;
             font-size: 25px;
-            padding: 5px 2px 0 42px;
+            padding: 5px 20px;
             border-radius: 100px 0px 0px 100px;
+            display: flex;
+            align-items: center;
         }
+        
+        p2 i {
+            margin-right: 10px;
+        }
+        
         img.chpostsport, img.chpostmovies {
             padding: 15px;
             border-radius: 40px 21px;
             margin: 15px;
-            box-shadow: 0 0 20px 0px #2d5852;
-            width: 100px; /* رجعنا الحجم لحجمه الأصلي */
-            height: auto;
+            width: 100px;
+            height: 100px;
             transition: transform 0.3s ease;
         }
+
+        img.chpostsport {
+            background-color: #2c3e50;
+            box-shadow: 0 0 20px 0px #2d5852;
+        }
+        
+        img.chpostmovies {
+            background-color: #e74c3c;
+            box-shadow: 0 0 20px 0px #8b3b3b;
+        }
+        
         img.chpostsport:hover, img.chpostmovies:hover {
             transform: scale(1.1);
         }
+        
         .scroll-container {
             overflow: auto;
             white-space: nowrap;
             padding: 10px;
-            direction: rtl; /* لجعل السحب من اليمين إلى اليسار */
+            direction: rtl; /* السحب من اليمين لليسار */
         }
+        
         ::-webkit-scrollbar {
             width: 10px;
             border-radius: 100px;
         }
+        
         ::-webkit-scrollbar-track {
             background: #181818;
         }
+        
         ::-webkit-scrollbar-thumb {
             background: #627572;
             border-radius: 100px;
@@ -115,7 +149,7 @@
 <body>
     <!-- بداية الرسوم المتحركة عند فتح الموقع -->
     <div class="loader animate__animated animate__fadeIn">
-        <i class="fas fa-spinner fa-spin fa-3x"></i>
+        <i class="bi bi-arrow-repeat"></i>
         <p>جار التحميل...</p>
     </div>
 
@@ -130,45 +164,69 @@
 
     <!-- بداية قسم القنوات الرياضية -->
     <div class="firstchannels-section animate__animated animate__fadeInUp">
-        <p2 class="sportchannels"><i class="fas fa-football-ball"></i> القنوات الرياضية</p2>
+        <p2 class="sportchannels"><i class="bi bi-trophy-fill"></i> القنوات الرياضية</p2>
     </div>
     <div class="scroll-container">
-        <a href="##">
-            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
-        </a>
-    </div>
-    <!-- نهاية قسم القنوات الرياضية -->
+                <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+             <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+             <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+             <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+             <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+             <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+             <a href="##">
+                <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+             </a>
+        
+              </div>
+        
+        
+              <!--نهاية قسم القنوات الرياضيه-->
 
-    <!-- بداية قسم قنوات الأفلام -->
-    <div class="secondchannels-section animate__animated animate__fadeInUp">
-        <p2 class="movieschannels"><i class="fas fa-film"></i> قنوات الأفلام</p2>
+
+
+
+                          <!--بداية قسم قنوات الافلام-->
+
+    <div class="secondchannels-section">
+        <p2 class="movieschannels">قنوات الافلام</p2>
     </div>
     <div class="scroll-container">
+
         <a href="##">
-            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
-        </a>
-        <a href="##">
-            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
-        </a>
-    </div>
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+     <a href="##">
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+     <a href="##">
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+     <a href="##">
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+     <a href="##">
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+     <a href="##">
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+     <a href="##">
+        <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+     </a>
+
+      </div>
     <!-- نهاية قسم قنوات الأفلام -->
     
     <script>
