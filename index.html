@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
+        body {
+            background: #1c1c1c url(bg.webp);
+            margin: 0;
+            padding: 0;
+            font-family: "Zain", system-ui;
+        }
+        .loader {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #54cfbb;
+            font-size: 20px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .header-page {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        p3.appname {
+            color: #54cfbb;
+            font-weight: 900;
+            font-size: 22px;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(180deg, #409a8c, #409a8c54, transparent);
+            width: max-content;
+            align-content: center;
+            flex-direction: column;
+            padding: 15px 15px 30px 15px;
+            border-radius: 0px 0px 30px 30px;
+            box-shadow: 0 0 80px -11px #3b867a;
+            backdrop-filter: blur(24px);
+        }
+        img.applogo {
+            width: 65px;
+            height: auto;
+        }
+        .firstchannels-section, .secondchannels-section {
+            margin-top: 157px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        p2.sportchannels {
+            background: linear-gradient(270deg, #3b8b7e, transparent);
+            padding-left: 20px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 25px;
+            padding: 5px 2px 0 42px;
+            border-radius: 100px 0px 0px 100px;
+        }
+        p2.movieschannels {
+            background: linear-gradient(270deg, #8b3b3b, transparent);    
+            padding-left: 20px;
+            color: white;
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 25px;
+            padding: 5px 2px 0 42px;
+            border-radius: 100px 0px 0px 100px;
+        }
+        img.chpostsport, img.chpostmovies {
+            padding: 15px;
+            border-radius: 40px 21px;
+            margin: 15px;
+            box-shadow: 0 0 20px 0px #2d5852;
+            width: 100px; /* رجعنا الحجم لحجمه الأصلي */
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        img.chpostsport:hover, img.chpostmovies:hover {
+            transform: scale(1.1);
+        }
+        .scroll-container {
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+            direction: rtl; /* لجعل السحب من اليمين إلى اليسار */
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 100px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #181818;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #627572;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- بداية الرسوم المتحركة عند فتح الموقع -->
+    <div class="loader animate__animated animate__fadeIn">
+        <i class="fas fa-spinner fa-spin fa-3x"></i>
+        <p>جار التحميل...</p>
+    </div>
+
+    <!-- بداية الهيدر -->
+    <div class="header-page animate__animated animate__bounceInDown">
+        <div class="brand">
+            <img class="applogo" src="urlogo.png" alt="Logo">
+            <p3 class="appname">منصة اور</p3>
+        </div>
+    </div>
+    <!-- نهاية الهيدر -->
+
+    <!-- بداية قسم القنوات الرياضية -->
+    <div class="firstchannels-section animate__animated animate__fadeInUp">
+        <p2 class="sportchannels"><i class="fas fa-football-ball"></i> القنوات الرياضية</p2>
+    </div>
+    <div class="scroll-container">
+        <a href="##">
+            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostsport" src="chLogo.png" alt="Cinque Terre">
+        </a>
+    </div>
+    <!-- نهاية قسم القنوات الرياضية -->
+
+    <!-- بداية قسم قنوات الأفلام -->
+    <div class="secondchannels-section animate__animated animate__fadeInUp">
+        <p2 class="movieschannels"><i class="fas fa-film"></i> قنوات الأفلام</p2>
+    </div>
+    <div class="scroll-container">
+        <a href="##">
+            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+        </a>
+        <a href="##">
+            <img class="chpostmovies" src="chLogo.png" alt="Cinque Terre">
+        </a>
+    </div>
+    <!-- نهاية قسم قنوات الأفلام -->
+    
+    <script>
+        // إزالة اللوادر بعد فتح الموقع
+        window.onload = function() {
+            document.querySelector('.loader').style.display = 'none';
+        };
+    </script>
+</body>
+</html>
